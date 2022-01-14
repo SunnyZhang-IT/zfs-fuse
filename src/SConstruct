@@ -57,7 +57,7 @@ else:
 if not (('-DDEBUG' in env['CCFLAGS']) or 
 		('-DNDEBUG' in env['CCFLAGS'])):
 	print
-	print "Misconfigured debug level: Neither DEBUG or NDEBUG appears to have been defined: %s" % env['CCFLAGS']
+	print("Misconfigured debug level: Neither DEBUG or NDEBUG appears to have been defined: %s" % env['CCFLAGS'])
 	sys.exit(1)
 
 env['CPPPATH'] = []
@@ -82,7 +82,7 @@ myarch = getarch(arch)
 
 if not myarch:
 	print
-	print 'Sorry, only the x86, amd64 and sparc64 hardware architectures are supported'
+	print('Sorry, only the x86, amd64 and sparc64 hardware architectures are supported')
 	sys.exit(1)
 
 if myarch == 'sparc64':
@@ -129,7 +129,7 @@ env.Install(man_dir, '../doc/zstreamdump.8')
 env.Install(man_dir, '../doc/zfs-fuse.8')
 
 if "tags" in sys.argv:
-    print "updating tags..."
+    print("updating tags...")
     os.system("ctags --extra=+f `find -name '*.c'` `find -name '*.h'`")
 
 env.Alias('install', [install_dir, man_dir, cfg_dir])

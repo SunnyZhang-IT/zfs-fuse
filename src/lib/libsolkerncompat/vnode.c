@@ -61,6 +61,7 @@
 #include <sys/ioctl.h>
 /* LINUX BLKGETSIZE64 */
 #include <sys/mount.h>
+#include <sys/sysmacros.h>
 
 #define VOPSTATS_UPDATE(vp, counter) ((void) 0)
 #define VOPSTATS_UPDATE_IO(vp, readdir, readdir_bytes, x) ((void) 0)

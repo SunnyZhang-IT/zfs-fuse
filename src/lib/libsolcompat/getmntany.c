@@ -37,6 +37,8 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
+#include <sys/sysmacros.h>
+
 #define BUFSIZE (MNT_LINE_MAX + 2)
 
 __thread char buf[BUFSIZE];

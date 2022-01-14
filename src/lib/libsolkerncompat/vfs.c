@@ -39,6 +39,8 @@
 #include <pthread.h>
 #include <unistd.h>
 
+#include <sys/sysmacros.h>
+
 struct vfs st_rootvfs = {};
 
 static vnode_t st_rootdir = {
